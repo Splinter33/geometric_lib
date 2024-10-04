@@ -1,17 +1,58 @@
-# User agreement 
-
-Please check out License Agreement for personal usage terms and limitations
-
----
-
+# Общее описание
+## Проект является набором функций в модулях на языке программирования Python, которые вычисляют периметр и площадь таких геометрических фигур как: 
+   круг, прямоугольник. В модулях есть функция, которая принимает соответствующие параметры и возвращает результат вычислительной операции.
 # Math formulas
 ## Area
-- Circle: S = πR²
-- Rectangle: S = ab
-- Square: S = a²
+- ### Circle: S = πR² | Умножаем константу *π* на радиус *r* круга в квадрате.
+- ### Square: S = a² | Возводим в квадрат одну сторону *a*.
 
 ## Perimeter
-- Circle: P = 2πR
-- Rectangle: P = 2a + 2b
-- Square: P = 4a
+- ### Circle: P = 2πR | Умножаем константу *π* на радиус круга *r* и на *2*.
+- ### Square: P = 4a | Умножаем *4* на сторону квадрата *а*.
 
+# Functions
+## circle
+- ### area(r) - Функция принимает r - радиус круга. Возвращает значение площади круга, вычисленной по формуле S = π * r * r.
+Пример вызова:
+```
+import circle
+
+r = 1
+area = circle.area(r)
+print(area)  # Вывод: 3.14
+```
+- ### perimeter(r) -  Функция принимает r - радиус круга. Возвращает значение периметра круга, вычисленное по формуле P = 2 * π * r.
+Пример вызова:
+```
+import circle
+
+r = 1
+perimeter = circle.perimeter(r)
+print(perimeter)  # Вывод: 6.28
+```
+
+## Square
+- ### area(a) - Функция принимает параметр a - длина стороны квадрата. Возвращает значение площади квадрата, вычисленной по формуле S = a * a.
+Пример вызова:
+```
+import square
+
+a = 1
+area = square.area(a)
+print(area)  # Вывод: 1
+```
+- ### perimeter(a) - Функция принимает параметр a - длина стороны квадрата. Возвращает значение периметра квадрата, вычисленное по формуле P = 4 * a.
+Пример вызова:
+```
+import square
+
+a = 1
+perimeter = square.perimeter(a)
+print(perimeter)  # Вывод: 4
+```
+
+# Changing history
+- ## 6adb96248a4d00d3bea13bd95d78ef52352cd1b4 - L-03: Docs added.
+- ## 438b89a1dfc58d90e9036fe431771427965cd1ff - L-05: Add user agreement.
+- ## 86edb1c3dd57fa9abc7ba2ec7052507938084727 - L-05: Update Docs. Add user agreement info.
+- ## 25d851dcf906e510762cae3cbc38381d3794f6f6 - L-06: Circle and square docs added.
