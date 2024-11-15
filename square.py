@@ -1,14 +1,14 @@
 def area(a):
-    # Проверка положительного значения
-    if a <= 0:
-        raise ValueError("Side length must be positive")
+    # Проверка на отрицательное значение
+    if a < 0:
+        raise ValueError("Side length must be non-negative")
     
     return a * a
 
 
 def perimeter(a):
-    # Проверка положительного значения
-    if a <= 0:
-        raise ValueError("Side length must be positive")
+    # Проверка на отрицательное значение
+    if a < 0:
+        raise ValueError("Side length must be non-negative")
     
     return 4 * a
