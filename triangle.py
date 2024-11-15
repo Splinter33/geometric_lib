@@ -4,7 +4,6 @@ def area(a, b, c):
         raise ValueError("Invalid side lengths for a triangle")
     if a < 0 or b < 0 or c < 0:
         raise ValueError("Side lengths must be positive")
-    
     p = (a + b + c) / 2
     return (p * (p - a) * (p - b) * (p - c)) ** 0.5
 
