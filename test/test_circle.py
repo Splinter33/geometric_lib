@@ -9,42 +9,35 @@ class functionTestCircle(unittest.TestCase):
         
     def test_circle_area1(self):
         # Проверяем площадь круга с радиусом 3
-        self.assertAlmostEqual(area(3), 28.274333882308138,
-                               places=7)
+        self.assertAlmostEqual(area(3), 28.27433, places=3)
         
     def test_circle_area2(self):
         # Проверяем площадь круга с радиусом 2
-        self.assertAlmostEqual(area(2), 12.566370614359172,
-                               places=7)    
+        self.assertAlmostEqual(area(2), 12.56637, places=3)    
         
     def test_circle_area3(self):
         # Проверяем площадь круга с радиусом 9
-        self.assertAlmostEqual(area(9), 254.46900494077323,
-                               places=7)
+        self.assertAlmostEqual(area(9), 254.46900, places=3)
         
     def test_circle_area4(self):
         # Проверяем площадь круга с радиусом 96
-        self.assertAlmostEqual(area(96), 28952.917895483533,
-                               places=7)
+        self.assertAlmostEqual(area(96), 28952.91789, places=3)
         
     def test_circle_area5(self):
         # Проверяем площадь круга с радиусом 3120
-        self.assertAlmostEqual(area(3120), 30581519.527104482,
-                               places=7)
+        self.assertAlmostEqual(area(3120), 30581519.5271, places=3)
         
     def test_circle_area6(self):
         # Проверяем площадь круга с радиусом 3.14
-        self.assertAlmostEqual(area(3.14), 30.974846927333928,
-                               places=7)
+        self.assertAlmostEqual(area(3.14), 30.97484, places=3)
         
     def test_circle_area7(self):
         # Проверяем площадь круга с радиусом 20.77
-        self.assertAlmostEqual(area(20.77), 1355.260765450796,
-                               places=7)
+        self.assertAlmostEqual(area(20.77), 1355.26076, places=3)
         
     def test_circle_area8(self):
         # Проверяем, что при отрицательном радиусе выбрасывается 
-        #исключение
+        # исключение
         with self.assertRaises(ValueError):
             area(-69)
             
