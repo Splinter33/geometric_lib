@@ -1,0 +1,43 @@
+name: Tests Workflow
+
+on:
+  push:
+    branches:
+      - master
+      - release_v2
+  pull_request:
+    branches:
+      - master
+      - release_v2
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      NAME: "Логинов Степан Иванович"
+      GROUP_NUM: "м3115"
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print information
+        run: |
+          echo "ФИО: ${{ env.NAME }}"
+          echo "Номер группы: ${{ env.GROUP_NUM }}"
+          echo "Ник на Github: ${{ github.actor }}"
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.13
+
+      - name: Run unit tests
+        run: |
+          python -m unittest discover -s test -p "test_*.py"
+
+      - name: Lint code with flake8
+        run: |
+          pip install flake8
+          flake8 --ignore=F401 .
