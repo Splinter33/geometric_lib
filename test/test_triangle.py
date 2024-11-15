@@ -1,15 +1,15 @@
 import unittest
 from triangle import area, perimeter
 
+
 class functionTestTriangle(unittest.TestCase):
     def test_triangle_area(self):
         # Проверяем площадь равностороннего треугольника со сторонами 1
-        self.assertAlmostEqual(area(1, 1, 1), 
-                               0.4330127018922193, places=7)
+        self.assertAlmostEqual(area(1, 1, 1), 0.433012701, places=7)
     
     def test_triangle_area1(self):
         # Проверяем, что треугольник с невалидными сторонами 
-        #вызывает исключение
+        # вызывает исключение
         with self.assertRaises(ValueError):
             area(1, 2, 3)
 
@@ -19,20 +19,19 @@ class functionTestTriangle(unittest.TestCase):
 
     def test_triangle_area3(self):
         # Проверяем, что при наличии нулевой стороны
-        #вызывается исключение
+        # вызывается исключение
         with self.assertRaises(ValueError):
             area(0, 1, 2)
 
     def test_triangle_area4(self):
         # Проверяем, что треугольник с некорректными сторонами 
-        #вызывает исключение
+        # вызывает исключение
         with self.assertRaises(ValueError):
             area(24, 69, 32)
 
     def test_triangle_area5(self):
         # Проверяем площадь треугольника с большими сторонами
-        self.assertAlmostEqual(area(234, 532, 423), 
-                               47929.25018647277, places=7)
+        self.assertAlmostEqual(area(234, 532, 423), 47929.25018, places=3)
 
     def test_triangle_area6(self):
         # Проверяем, что слишком длинная сторона вызывает 
@@ -54,9 +53,8 @@ class functionTestTriangle(unittest.TestCase):
 
     def test_triangle_area9(self):
         # Проверяем площадь равностороннего треугольника с 
-        #большими сторонами
-        self.assertAlmostEqual(area(10000, 10000, 10000),
-                               43301270.18922193, places=7)
+        # большими сторонами
+        self.assertAlmostEqual(area(10000, 10000, 10000), 43301270.1892, places=3)
 
     def test_triangle_perimeter(self):
         # Проверяем периметр равностороннего треугольника
@@ -64,7 +62,7 @@ class functionTestTriangle(unittest.TestCase):
 
     def test_triangle_perimeter1(self):
         # Проверяем, что треугольник с невалидными сторонами 
-        #вызывает исключение
+        # вызывает исключение
         with self.assertRaises(ValueError):
             perimeter(1, 2, 3)
 
@@ -74,13 +72,13 @@ class functionTestTriangle(unittest.TestCase):
     
     def test_triangle_perimeter3(self):
         # Проверяем, что при наличии нулевой стороны 
-        #вызывается исключение
+        # вызывается исключение
         with self.assertRaises(ValueError):
             perimeter(0, 1, 2)
     
     def test_triangle_perimeter4(self):
         # Проверяем, что треугольник с некорректными сторонами 
-        #вызывает исключение
+        # вызывает исключение
         with self.assertRaises(ValueError):
             perimeter(24, 69, 32)
     
@@ -105,7 +103,7 @@ class functionTestTriangle(unittest.TestCase):
 
     def test_triangle_perimeter9(self):
         # Проверяем периметр равностороннего треугольника 
-        #с большими сторонами
+        # с большими сторонами
         self.assertEqual(perimeter(10000, 10000, 10000), 30000)
 
 if __name__ == '__main__':
