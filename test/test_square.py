@@ -29,7 +29,6 @@ class functionTestSquare(unittest.TestCase):
     def test_square_area5(self):
         # Проверяем площадь квадрата с дробным значением стороны
         self.assertAlmostEqual(area(3.14), 9.8596, places=4)
-
     
     def test_square_area6(self):
         # Проверяем площадь квадрата с дробным значением стороны
@@ -39,7 +38,7 @@ class functionTestSquare(unittest.TestCase):
         # Проверяем, что отрицательная сторона вызывает исключение
         with self.assertRaises(ValueError):
             area(-69)
-    
+            
     def test_square_area8(self):
         # Проверяем площадь квадрата с очень большой стороной
         self.assertEqual(area(14882284201337), 221482383049364867952587569)
