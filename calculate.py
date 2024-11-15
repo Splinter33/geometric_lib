@@ -8,6 +8,7 @@ sizes = {"perimeter-circle": 1, "area-circle": 1,
          "perimeter-square": 1, "area-square": 1,
          "perimeter-triangle": 3, "area-triangle": 3}
 
+
 def calc(fig, func, size):
     if fig not in figs:
         raise ValueError(f"Invalid figure: {fig}")
@@ -27,7 +28,7 @@ def calc(fig, func, size):
     if fig == 'triangle':
         a, b, c = size
         if not (a + b > c and a + c > b and b + c > a):
-            raise ValueError(f"Invalid side lengths for a triangle")
+            raise ValueError("Invalid side lengths for a triangle")
 
     # Вычисление результата
     try:
