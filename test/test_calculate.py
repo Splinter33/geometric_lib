@@ -5,12 +5,12 @@ from calculate import calc
 class TestCalculate(unittest.TestCase):
     def test_valid_cases(self):
         # Проверяем корректный расчет площади круга
-        self.assertAlmostEqual(calc("circle", "area", [3]), 28.274333882308138, 
+        self.assertAlmostEqual(calc("circle", "area", [3]), 28.274333882308138,
                                places=7)
 
     def test_valid_cases1(self):
         # Проверяем корректный расчет периметра круга
-        self.assertAlmostEqual(calc("circle", "perimeter", [3]), 
+        self.assertAlmostEqual(calc("circle", "perimeter", [3]),
                                18.84955592153876, places=7)
 
     def test_valid_cases2(self):
@@ -49,6 +49,7 @@ class TestCalculate(unittest.TestCase):
         # Проверяем случай, когда указаны некорректные стороны для треугольника
         with self.assertRaises(ValueError):
             calc("triangle", "area", [1, 2, 3])
+
 
 if __name__ == '__main__':
     unittest.main()
