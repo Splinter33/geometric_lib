@@ -53,7 +53,7 @@ class functionTestTriangle(unittest.TestCase):
     def test_triangle_perimeter(self):
         # Проверяем периметр равностороннего треугольника
         self.assertEqual(perimeter(1, 1, 1), 3)
-        
+
     def test_triangle_perimeter1(self):
         # Проверяем, что треугольник с невалидными сторонами
         # вызывает исключение
@@ -69,7 +69,7 @@ class functionTestTriangle(unittest.TestCase):
         # вызывается исключение
         with self.assertRaises(ValueError):
             perimeter(0, 1, 2)
-            
+
     def test_triangle_perimeter4(self):
         # Проверяем, что треугольник с некорректными сторонами
         # вызывает исключение
